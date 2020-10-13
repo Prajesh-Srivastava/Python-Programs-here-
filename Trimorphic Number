@@ -1,0 +1,28 @@
+# Trimorphic number 
+def isTrimorphic(N) : 
+      
+    # Store the cube 
+    cube = N * N * N 
+   
+    # Start Comparing digits 
+    while (N > 0) : 
+         
+        # Return false, if any digit 
+        # of N doesn't match with 
+        # its cube's digits from last 
+        if (N % 10 != cube % 10) : 
+            return False
+   
+        # Reduce N and cube 
+        N = N // 10
+        cube = cube // 10
+      
+    return True
+  
+  
+# Driver code 
+N = 24
+if(isTrimorphic(N)) : 
+    print("trimorphic") 
+else : 
+    print("not trimporphic") 
