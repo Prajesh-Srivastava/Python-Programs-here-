@@ -1,0 +1,7 @@
+X = 3
+Y = 4
+print("Before Swapping:")
+print(X,Y)
+X,Y = Y,X
+print("After Swapping:")
+print(X,Y)
