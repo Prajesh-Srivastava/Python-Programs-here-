@@ -1,0 +1,25 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class Linkedlist:
+    def __init__(self):
+        self.head = None
+    def push(self,newdata):
+        newnode = Node(newdata)
+        newnode.next = self.head
+        self.head = newnode
+    def middle(self):
+        p = self.head
+        q = self.head
+        while(q !=  None and q.next != None):
+            p = p.next
+            q = q.next.next
+        print(p.data)
+llist = Linkedlist()
+A = map(int,input().split())
+for i in A:
+    llist.push(i)
+llist.middle() 
+    
+    
